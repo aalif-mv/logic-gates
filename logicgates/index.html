@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <svg id="grid">
+        <defs>
+            <clipPath id="grid-clip">
+                <rect x="40" y="40" rx="20" ry="20"
+                    style="fill:rgb(100, 100, 100);
+                    width: calc(100% - 80px); height: calc(100vh - 80px);" />
+            </clipPath>
+        </defs>
+        <rect x="40" y="40" rx="20" ry="20"
+            style="fill:rgb(100, 100, 100); 
+            width: calc(100% - 80px); height: calc(100vh - 80px);" />
+    </svg>
+    <canvas id="canvas"></canvas>
+    <svg id="editor">
+        <circle cx="40" cy="80" r="10" fill="red" />
+        <circle cx="40" cy="160" r="10" fill="red" />
+    </svg>
+    <script src="script.js"></script>
+</body>
+</html>
