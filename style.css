@@ -1,25 +1,60 @@
 body {
     box-sizing: border-box;
     margin: 0;
-    display: grid;
+    display: flex;
     height: 100vh;
     user-select: none;
-}
-svg {
-    width: 100%;
-    height: 100%;
-}
-#grid {
-    background-color:rgb(44, 44, 44);
-}
-#editor {
-    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(29, 29, 29);
 }
 #canvas {
-    position: absolute;
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+    border: 4px solid rgb(56, 56, 56);
+    box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
 }
-img {
-    position: absolute;
-    cursor: move;
-    -webkit-user-drag: none;
+/* #canvas_holder {
+    width: calc(100% - 20px);
+} */
+#grid {
+    display: none;
 }
+
+
+.grid {
+    display: grid;
+    grid-template-rows: auto 50px;
+    /* width: 90%;
+    height: 90%; */
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+}
+.panel {
+    display: flex;
+    padding: 0px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+.panel button:first-child {
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+.panel button:last-child {
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+.panel button {
+    padding: 0px 8px;
+    border: 0px;
+    background-color: whitesmoke;
+}
+.panel button:hover {
+    background-color: rgb(199, 199, 199);
+}
+
+@media screen and (max-width: 740px) {
+    .panel button img {
+        height: 30px;
+    }
+  }

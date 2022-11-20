@@ -8,23 +8,30 @@
     <title>Document</title>
 </head>
 <body>
-    <svg id="grid">
-        <defs>
-            <clipPath id="grid-clip">
-                <rect x="40" y="40" rx="20" ry="20"
-                    style="fill:rgb(100, 100, 100);
-                    width: calc(100% - 80px); height: calc(100vh - 80px);" />
-            </clipPath>
-        </defs>
-        <rect x="40" y="40" rx="20" ry="20"
-            style="fill:rgb(100, 100, 100); 
-            width: calc(100% - 80px); height: calc(100vh - 80px);" />
-    </svg>
-    <canvas id="canvas"></canvas>
-    <svg id="editor">
-        <circle cx="40" cy="80" r="10" fill="red" />
-        <circle cx="40" cy="160" r="10" fill="red" />
-    </svg>
+    <svg id="grid"></svg>
+    <div class="grid">
+        <div id="canvas_holder">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="panel">
+            <button onclick="createGate('1', 200, 200);"><img src="assets/graphics/and-gate.svg" height="40"></button>
+            <button onclick="createGate('2', 200, 200);"><img src="assets/graphics/nand-gate.svg" height="40"></button>
+            <button onclick="createGate('3', 200, 200);"><img src="assets/graphics/not-gate.svg" height="40"></button>
+            <button onclick="createGate('4', 200, 200);"><img src="assets/graphics/buffer-gate.svg" height="40"></button>
+            <button onclick="createGate('5', 200, 200);"><img src="assets/graphics/or-gate.svg" height="40"></button>
+            <button onclick="createGate('6', 200, 200);"><img src="assets/graphics/nor-gate.svg" height="40"></button>
+            <button onclick="createGate('7', 200, 200);"><img src="assets/graphics/xor-gate.svg" height="40"></button>
+            <button onclick="createGate('8', 200, 200);"><img src="assets/graphics/xnor-gate.svg" height="40"></button>
+            <button onclick="createGate('9', 0, 100);"><img src="assets/graphics/input0.svg" height="40"></button>
+            <button onclick="createGate('0', ((round(canvas.width, gridCellWidth) - gridCellWidth*3)+1), 100);"><img src="assets/graphics/output0.svg" height="40"></button>
+        </div>
+    </div>
+    <script src="javascript/utils.js"></script>
+    <script src="javascript/engine.js"></script>
+    <script src="javascript/data.js"></script>
+    <script src="javascript/wire.js"></script>
+    <script src="javascript/interaction.js"></script>
+    <script src="javascript/logicgates.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
